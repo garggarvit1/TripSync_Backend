@@ -23,9 +23,14 @@ const connectDB = () => {
     .catch((error) => console.log(error));
 };
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://trip-sync-frontend.vercel.app/"
+  // add more origins as needed
+];
 //middlewares
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: allowedOrigins ,
   credentials: true,
   allowedMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
 }
