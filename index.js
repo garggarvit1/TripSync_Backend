@@ -25,7 +25,7 @@ const connectDB = () => {
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://trip-sync-frontend.vercel.app/"
+  "https://trip-sync-frontend.vercel.app"
   // add more origins as needed
 ];
 //middlewares
